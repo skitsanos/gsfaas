@@ -20,7 +20,7 @@ function doGet(e)
         return response({error: 'Device-ID is undefined'});
     }
 
-    var id = e.parameter.sheetId;//docs.google.com/spreadsheetURL/d
+    var id = e.parameter.sheetId;
     var sheet = SpreadsheetApp.openById(id).getSheetByName(e.parameter.deviceId);
 
     if (sheet === null) //sheet is not found, create a new one
